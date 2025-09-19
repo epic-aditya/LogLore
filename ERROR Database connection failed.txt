@@ -1,4 +1,0 @@
-ERROR: Database connection failed
-User: admin@company.com attempted login from IP 192.168.1.100
-API Key: sk-1234567890abcdefghijklmnop failed
-Java exception: NullPointerException at line 45
