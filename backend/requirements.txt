@@ -1,5 +1,5 @@
 fastapi
-uvicorn
-python-multipart
+uvicorn[standard]
 python-dotenv
-openai
+google-generativeai
+pydantic
