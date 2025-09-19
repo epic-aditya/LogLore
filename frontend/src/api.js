@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://loglore-backend.onrender.com';
 
 export const aiTroubleshoot = async (logText, metadata = {}, mode = 'beginner') => {
   try {
