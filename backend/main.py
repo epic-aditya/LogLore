@@ -194,8 +194,10 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "https://*.vercel.app",
-        "https://*.netlify.app"
+        "https://*.netlify.app",
+        "https://loglore.vercel.app/"
     ],
-    allow_methods=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
