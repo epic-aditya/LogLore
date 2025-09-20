@@ -94,15 +94,19 @@ def ai_troubleshoot(req: LogRequest):
     
     if req.mode.lower() == "advanced":
         system_prompt = (
-            "Use plain text only no bold letters nor italic"
-            "You are an expert engineer. Provide technical analysis with "
-            "specific commands and verification steps."
+            '''You are a professional error handler and fixer. 
+The user will provide an error log or error text.
+Explain the solution for professionals with technical depth, correct terminology, root cause analysis, and exact fixes (commands, configs, or code if needed).
+Do not use formatting like bold or italics. Do not add any extra text or formalities. Only give direct fixes.
+'''
         )
     else:
         system_prompt = (
-            "Use plain text only no bold letters nor italic"
-            "You are a helpful technical mentor. Explain errors simply "
-            "with clear step-by-step fixes."
+            '''You are a professional error handler and fixer. 
+The user will provide an error log or error text.
+Explain the solution in very simple step-by-step instructions, using no technical terms. Write it like spoon-feeding a complete beginner.
+Do not use formatting like bold or italics. Do not add any extra text or formalities. Only give direct fixes.
+'''
         )
     
     user_msg = f"MODE: {req.mode}\nLOG:\n{redacted}"
