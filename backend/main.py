@@ -94,11 +94,13 @@ def ai_troubleshoot(req: LogRequest):
     
     if req.mode.lower() == "advanced":
         system_prompt = (
+            "Use plain text only no bold letters nor italic"
             "You are an expert engineer. Provide technical analysis with "
             "specific commands and verification steps."
         )
     else:
         system_prompt = (
+            "Use plain text only no bold letters nor italic"
             "You are a helpful technical mentor. Explain errors simply "
             "with clear step-by-step fixes."
         )
