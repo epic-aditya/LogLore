@@ -1,6 +1,5 @@
 # LogLore - AI-Powered Secure Log Analysis
 
-![LogLore UI](https://via.placeholder.com/800x400?text=LogLore+Dashboard)
 
 **LogLore** is a secure, intelligent log analysis platform designed to help developers and system administrators troubleshoot errors instantly. Powered by **Google Gemini 2.0**, it provides deep insights, root cause analysis, and actionable fixes while ensuring sensitive data (PII) is automatically redacted before processing.
 
@@ -29,8 +28,9 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/loglore.git
-cd loglore
+git clone https://github.com/epic-aditya/LogLore.git
+
+cd LogLore
 ```
 
 ### 2. Backend Setup
@@ -79,7 +79,48 @@ npm start
 3.  **Review PII**: LogLore will warn you if sensitive data is detected. You can review the counts before proceeding.
 4.  **Analyze**: Click "Analyze Log" to get AI-powered insights.
 5.  **Export**: Save the analysis as a report or copy the redacted log for safe sharing.
+## How it works diagram
+```
+User log/input
+      │
+      ▼
+┌───────────────┐
+│ React Frontend│
+│ (log editor,  │
+│ mode select)  │
+└──────┬────────┘
+       │
+       │ raw log
+       ▼
+┌──────────────┐
+│ Client PII   │
+│ redaction    │
+│ (regex)      │
+└──────┬───────┘
+       │
+       │ redacted log
+       ▼
+┌──────────────┐
+│ FastAPI      │
+│ backend +    │
+│ extra checks │
+└──────┬───────┘
+       │
+       │ prompt + redacted log
+       ▼
+┌──────────────┐
+│ Gemini 2.0   │
+│ analysis     │
+└──────┬───────┘
+       │
+       │ insights, RCA, fixes
+       ▼
+┌──────────────┐
+│ React result │
+│ view + export│
+└──────────────┘
 
+```
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork the repository and submit a Pull Request.
