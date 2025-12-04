@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="frontend/public/logo512.png" alt="LogLore logo" width="200">
+</p>
+
 # LogLore - AI-Powered Secure Log Analysis
 
 
