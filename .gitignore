@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/.venv/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+*.env
+
+# Build files
+frontend/build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test files
+test_*.py
+test_*.txt
+*_test.py
